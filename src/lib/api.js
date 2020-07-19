@@ -1,38 +1,36 @@
-import axios from "axios";
-import {asyncLocalStorage} from '../lib/helpers';
+import axios from 'axios';
+import UtilityFunctions from './UtilityFunctions';
 
-export const BASE_URL = 'http://www.omdbapi.com/';
+const BASE_URL = 'http://www.omdbapi.com/';
+
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
-  timeout: 20000
+  timeout: 30000,
 });
 
-
-axiosInstance.defaults.headers.common["Content-Type"] = "application/json";
-
+axiosInstance.defaults.headers.common['Content-Type'] = 'application/json';
 
 axiosInstance.interceptors.request.use(
-  async config => {
-    console.log("REQUEST : ", config);
+  (config) => {
+    UtilityFunctions.consoleFunc('REQUEST', '#FFAA00', config);
+    return config;
   },
-  err => Promise.reject(err)
+  (err) => Promise.reject(err),
 );
 
 axiosInstance.interceptors.response.use(
-  response => {
-    console.log("RESPONSE : ", response.data);
-    return response.data;
+  (response) => {
+    UtilityFunctions.consoleFunc('RESPONSE', '#59FF00 ', response);
+    return response;
   },
-  error => {
-    if (!error.response) {
-      console.log('NETWORK ERROR');
-    }
-    console.log("response error: ", error.response ? error.response : error);
-    if (error.response) {
-      asyncLocalStorage.clear();
-    }
+  (error) => {
+    UtilityFunctions.consoleFunc(
+      'RESPONSE_ERROR',
+      '#E50808',
+      error.response ? error.response : error,
+    );
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;

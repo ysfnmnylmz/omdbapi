@@ -1,16 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {connect} from 'react-redux';
+import {getMovie} from '../store/actions/getmovie';
 
 
-function App() {
+function App(props) {
+  const [keywords, setKeywords] = useState('');
+  const onChange = e => {
+    setKeywords(e.target.value)
+  };
+  
+  const onSubmit = (e) => {
+    e.preventDefault();
+    props.getMovie(keywords);
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-          Learn React
+        <form onSubmit={onSubmit}>
+          <input onChange={onChange} placeholder={'Search...'} />
+          <button type={'submit'}>Search</button>
+        </form>
       </header>
     </div>
   );
 }
-export default App;
+
+const mapStateToProps = (state) =>({
+    getMovieReducer: state.getMovieReducer
+});
+export default connect(mapStateToProps,{getMovie}) (App);
