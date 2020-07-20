@@ -16,7 +16,7 @@ export default (state = INITIAL_STATE, action) => {
   case GET_MOVIE_FAIL:
     return {
       ...state,
-      getMovieError: payload,
+      getMovieError: payload.Error,
       movie: null
     };
   default:
