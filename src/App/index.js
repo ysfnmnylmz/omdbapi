@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import Movie from '../components/Movie';
 import { getMovie } from '../store/actions/getmovie';
 import { asyncLocalStorage } from '../lib/helpers';
+import './App.scss';
 
 
 function App(props) {
@@ -14,7 +16,9 @@ function App(props) {
   }
   useEffect(() => {
     getStorage();
-    setSearchlist(storage.split(','))
+    if (storage) {
+      setSearchlist(storage.split(','))
+    }
   }, [storage])
 
 
@@ -29,16 +33,19 @@ function App(props) {
     asyncLocalStorage.setItem('searchTypes', keywords)
     getStorage();
   };
-  const addFav = (e, data) => {
+  const addFav = (e, data, note) => {
     e.preventDefault()
-    setFavlist([...favList, data])
+    const movieData = {
+        movie: data,
+        userNote: note
+    }
+    setFavlist([...favList, movieData])
   }
-  console.log('favlist', favList)
 
   const renderData = (data) => {
     if (data.movie && data.movie.Response && data.movie.Response === 'True') {
-      return (<p style={{ color: 'green' }}>{`${data.movie.Title} - ${data.movie.Released}`}<a onClick={(e)=>addFav(e,data.movie.Title)} href={'#!'}>Kalp</a></p>)
-    } else if (data.getMovieError && data.getMovieError) {
+      return (<Movie movie={data.movie} addFav={addFav} />)
+    } else if (data.getMovieError) {
       return (<p style={{ color: 'red' }}>{`${data.getMovieError}`}</p>)
     }
   }
@@ -50,6 +57,7 @@ function App(props) {
   const { getMovieReducer } = props;
   return (
     <div className="App">
+      {console.log(favList)}
       <header className="App-header">
         <form onSubmit={onSubmit}>
           <input onChange={onChange} placeholder={'Search...'} />
