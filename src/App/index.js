@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Movie from '../components/Movie';
+import FavNavigation from '../components/FavNavigation';
+import FavButton from '../components/common/FavButton';
 import { getMovie } from '../store/actions/getmovie';
 import { asyncLocalStorage } from '../lib/helpers';
-import './App.scss';
+import { BsSearch } from 'react-icons/bs';
+import '../assets/main.scss';
 
 
 function App(props) {
@@ -32,40 +35,40 @@ function App(props) {
     props.getMovie(keywords);
     asyncLocalStorage.setItem('searchTypes', keywords)
     getStorage();
+    document.getElementsByClassName('search-form')[0].classList.add('active');
   };
   const addFav = (e, data, note) => {
     e.preventDefault()
     const movieData = {
-        movie: data,
-        userNote: note
+      movie: data,
+      userNote: note
     }
     setFavlist([...favList, movieData])
   }
 
   const renderData = (data) => {
     if (data.movie && data.movie.Response && data.movie.Response === 'True') {
-      return (<Movie movie={data.movie} addFav={addFav} />)
+      return (<Movie searchList={searchList} movie={data.movie} addFav={addFav} />)
     } else if (data.getMovieError) {
       return (<p style={{ color: 'red' }}>{`${data.getMovieError}`}</p>)
     }
   }
-  const renderSearchList = (data) => {
-    if (data) {
-      return (data.map((item, i) => <p key={String(i)}>{item}</p>))
-    }
-  }
   const { getMovieReducer } = props;
   return (
-    <div className="App">
-      {console.log(favList)}
+    <div className="App" style={{position:'relative', overflowX:'hidden'}}>
       <header className="App-header">
+
+      </header>
+      <div className={'search-form container'} >
         <form onSubmit={onSubmit}>
           <input onChange={onChange} placeholder={'Search...'} />
-          <button type={'submit'}>Search</button>
+          <button className={'search-form_btn'} type={'submit'}><BsSearch size={'22'} /></button>
         </form>
-        {/* {renderSearchList(searchList)} */}
-        {getMovieReducer && renderData(getMovieReducer)}
-      </header>
+      </div>
+      {/* {renderSearchList(searchList)} */}
+      {getMovieReducer && renderData(getMovieReducer)}
+      <FavNavigation favList={favList}/>
+      <FavButton/>
     </div>
   );
 }

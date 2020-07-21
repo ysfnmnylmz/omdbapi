@@ -1,0 +1,111 @@
+.search-form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    &.active{
+        height: 20vh;
+    }
+    form{
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        input{
+            width: 100%;
+            border: 1px solid rgba(0,0,0,.2);
+            padding: 25px;
+            height: 50px;
+            border-radius: 25px;
+            outline: none;
+            &:focus{
+                box-shadow: 0 0 30px 2px rgba(0,0,0,.2);
+            }
+        }
+        button{
+            position: absolute;
+            right: 0;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: none;
+        }
+    }
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    div{
+        display: flex;
+        p{ 
+            min-width: 80px;
+            font-weight: 600;
+            color: #333;
+        }
+        span,a{
+            margin-left:10px;
+            font-weight: 400;
+            color: lighten(#333, 10%);
+        }
+        a{
+            color: green;
+        }
+    }   
+}
+.search-list{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-weight: 600;
+        color: #333;
+    }
+    div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.fav-navigation{
+    position: absolute;
+    border-left: 2px solid #333;
+    width: 250px;
+    height: 100vh;
+    right: -250px;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    transition: all .5s ease;
+    padding:75px 10px;
+    &.active{
+        right: 0;
+    }
+
+    div{
+        p{
+            line-height: 1;
+            font-weight: 600;
+            &:nth-child(2){
+                font-weight: 400;
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+.added-fav{
+    display: none;
+    color:green;
+    position: absolute;
+    top:5px;
+    right: 5px;
+    transition: all .5s ease;
+    &.active{
+        display: block;
+    }
+}
