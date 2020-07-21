@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "184c97dfb2d667b897e385abf7be05e3",
+    "revision": "a58b3308e12d5301f83bc061d86e45df",
     "url": "/omdbapi/index.html"
   },
   {
-    "revision": "6bb934ca9bb273b28ca7",
-    "url": "/omdbapi/static/css/main.9f8d77ee.chunk.css"
+    "revision": "99415ea6fbcfc99f07f6",
+    "url": "/omdbapi/static/css/main.70252097.chunk.css"
   },
   {
-    "revision": "d6638e1e04f236608977",
-    "url": "/omdbapi/static/js/2.4ac50568.chunk.js"
+    "revision": "d1f29a04f837a5657b8b",
+    "url": "/omdbapi/static/js/2.44c9f1b6.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/omdbapi/static/js/2.4ac50568.chunk.js.LICENSE.txt"
+    "url": "/omdbapi/static/js/2.44c9f1b6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6bb934ca9bb273b28ca7",
-    "url": "/omdbapi/static/js/main.aff8467f.chunk.js"
+    "revision": "99415ea6fbcfc99f07f6",
+    "url": "/omdbapi/static/js/main.1c8e98e4.chunk.js"
   },
   {
     "revision": "b7863c2b7c330c306257",
