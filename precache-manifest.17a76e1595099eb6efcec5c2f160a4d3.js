@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a58b3308e12d5301f83bc061d86e45df",
+    "revision": "eea9096aeb9fd68302e0b96decfd6724",
     "url": "/omdbapi/index.html"
   },
   {
-    "revision": "99415ea6fbcfc99f07f6",
+    "revision": "2b7fe7afef6f0d0db2f0",
     "url": "/omdbapi/static/css/main.70252097.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/omdbapi/static/js/2.44c9f1b6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "99415ea6fbcfc99f07f6",
-    "url": "/omdbapi/static/js/main.1c8e98e4.chunk.js"
+    "revision": "2b7fe7afef6f0d0db2f0",
+    "url": "/omdbapi/static/js/main.c0f80b76.chunk.js"
   },
   {
     "revision": "b7863c2b7c330c306257",
