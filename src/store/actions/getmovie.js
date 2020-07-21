@@ -14,7 +14,7 @@ export const getMovie = (title) => async dispatch => {
     } else {
       await asyncLocalStorage.setItem('searchTypes', localStorage + ',' + title);
     }
-    const response = await api.get(`?t=${title}&apikey=676f0853`);
+    const response = await api.get(`?t=${title}`);
     const payload = await response.data;
     if(payload.Response === 'True'){
       dispatch(fetchingSuccess(GET_MOVIE, payload));

@@ -1,18 +1,20 @@
 import axios from 'axios';
 import UtilityFunctions from './UtilityFunctions';
 
-const BASE_URL = 'http://www.omdbapi.com/';
+const BASE_URL = 'https://www.omdbapi.com/';
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
   timeout: 30000,
 });
 
+
 axiosInstance.defaults.headers.common['Content-Type'] = 'application/json';
 
 axiosInstance.interceptors.request.use(
   (config) => {
     UtilityFunctions.consoleFunc('REQUEST', '#FFAA00', config);
+    config.params = {'apikey': '676f0853'}
     return config;
   },
   (err) => Promise.reject(err),

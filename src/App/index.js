@@ -55,15 +55,13 @@ function App(props) {
   }
   const { getMovieReducer } = props;
   return (
-    <div className="App" style={{position:'relative', overflowX:'hidden'}}>
-      <header className="App-header">
-
-      </header>
+    <div className="movie-search-app" style={{position:'relative', overflowX:'hidden'}}>
       <div className={'search-form container'} >
         <form onSubmit={onSubmit}>
           <input onChange={onChange} placeholder={'Search...'} />
           <button className={'search-form_btn'} type={'submit'}><BsSearch size={'22'} /></button>
         </form>
+        <small>Movie Search App by omdbapi.com</small>
       </div>
       {/* {renderSearchList(searchList)} */}
       {getMovieReducer && renderData(getMovieReducer)}
