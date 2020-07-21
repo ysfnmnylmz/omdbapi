@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/omdbapi/static/css/main.019de4e7.chunk.css",
+    "main.js": "/omdbapi/static/js/main.3245ad8f.chunk.js",
+    "main.js.map": "/omdbapi/static/js/main.3245ad8f.chunk.js.map",
+    "runtime-main.js": "/omdbapi/static/js/runtime-main.3e209b94.js",
+    "runtime-main.js.map": "/omdbapi/static/js/runtime-main.3e209b94.js.map",
+    "static/js/2.4ac50568.chunk.js": "/omdbapi/static/js/2.4ac50568.chunk.js",
+    "static/js/2.4ac50568.chunk.js.map": "/omdbapi/static/js/2.4ac50568.chunk.js.map",
+    "index.html": "/omdbapi/index.html",
+    "precache-manifest.c71a40def1d0426687d6d1b028cb65b6.js": "/omdbapi/precache-manifest.c71a40def1d0426687d6d1b028cb65b6.js",
+    "service-worker.js": "/omdbapi/service-worker.js",
+    "static/css/main.019de4e7.chunk.css.map": "/omdbapi/static/css/main.019de4e7.chunk.css.map",
+    "static/js/2.4ac50568.chunk.js.LICENSE.txt": "/omdbapi/static/js/2.4ac50568.chunk.js.LICENSE.txt",
+    "static/media/no-poster.jpg": "/omdbapi/static/media/no-poster.990a45c6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e209b94.js",
+    "static/js/2.4ac50568.chunk.js",
+    "static/css/main.019de4e7.chunk.css",
+    "static/js/main.3245ad8f.chunk.js"
+  ]
+}
