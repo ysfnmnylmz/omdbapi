@@ -63,7 +63,6 @@ function App(props) {
         </form>
         <small>Movie Search App by omdbapi.com</small>
       </div>
-      {/* {renderSearchList(searchList)} */}
       {getMovieReducer && renderData(getMovieReducer)}
       <FavNavigation favList={favList}/>
       <FavButton/>
