@@ -21,7 +21,7 @@ function Movie(props) {
     return (
         <Container>
             <Row>
-                <Col xl={4} md={4} sm={6} xs={12}><img style={{ width: 300, height: 400 }} src={movie.Poster !== 'N/A' ? movie.Poster : noPoster} alt={movie.Title} /></Col>
+                <Col xl={4} md={4} sm={6} xs={12}><img className={'img-fluid'} src={movie.Poster !== 'N/A' ? movie.Poster : noPoster} alt={movie.Title} /></Col>
                 <Col xl={4} md={4} sm={6} xs={12} className={'movie-info'}>
                     <div><p>Name:</p><a href={`https://www.google.com.tr/search?tbm=vid&hl=tr&source=hp&biw=&bih=&q=${movie.Title}`} rel={"noopener noreferrer"} target={'_blank'} style={{ color: 'green' }}>{movie.Title}</a></div>
                     <div><p>Released:</p><span>{movie.Released}</span></div>

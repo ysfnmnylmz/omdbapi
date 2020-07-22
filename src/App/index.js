@@ -50,7 +50,7 @@ function App(props) {
     if (data.movie && data.movie.Response && data.movie.Response === 'True') {
       return (<Movie searchList={searchList} movie={data.movie} addFav={addFav} />)
     } else if (data.getMovieError) {
-      return (<p style={{ color: 'red' }}>{`${data.getMovieError}`}</p>)
+      return (<p className={'container'} style={{ color: 'red' }}>{`${data.getMovieError}`}</p>)
     }
   }
   const { getMovieReducer } = props;

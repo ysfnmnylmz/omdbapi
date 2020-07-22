@@ -1,0 +1,10 @@
+
+@media only screen and (max-width: 899px){
+    .movie-search-app{
+        .search-form{
+            &.active{
+                width: 70%;
+            }
+        }
+    }
+}
