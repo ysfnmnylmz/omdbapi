@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/omdbapi/static/css/main.0049ee11.chunk.css",
-    "main.js": "/omdbapi/static/js/main.028ca1b1.chunk.js",
-    "main.js.map": "/omdbapi/static/js/main.028ca1b1.chunk.js.map",
+    "main.js": "/omdbapi/static/js/main.77bde35c.chunk.js",
+    "main.js.map": "/omdbapi/static/js/main.77bde35c.chunk.js.map",
     "runtime-main.js": "/omdbapi/static/js/runtime-main.3e209b94.js",
     "runtime-main.js.map": "/omdbapi/static/js/runtime-main.3e209b94.js.map",
     "static/js/2.4ac50568.chunk.js": "/omdbapi/static/js/2.4ac50568.chunk.js",
     "static/js/2.4ac50568.chunk.js.map": "/omdbapi/static/js/2.4ac50568.chunk.js.map",
     "index.html": "/omdbapi/index.html",
-    "precache-manifest.b267b49890c0f3e6d445efb36a733bb4.js": "/omdbapi/precache-manifest.b267b49890c0f3e6d445efb36a733bb4.js",
+    "precache-manifest.fba4e160fa5f00d2727ff28d3a40ccf2.js": "/omdbapi/precache-manifest.fba4e160fa5f00d2727ff28d3a40ccf2.js",
     "service-worker.js": "/omdbapi/service-worker.js",
     "static/css/main.0049ee11.chunk.css.map": "/omdbapi/static/css/main.0049ee11.chunk.css.map",
     "static/js/2.4ac50568.chunk.js.LICENSE.txt": "/omdbapi/static/js/2.4ac50568.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3e209b94.js",
     "static/js/2.4ac50568.chunk.js",
     "static/css/main.0049ee11.chunk.css",
-    "static/js/main.028ca1b1.chunk.js"
+    "static/js/main.77bde35c.chunk.js"
   ]
 }
